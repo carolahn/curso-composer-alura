@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 require 'vendor/autoload.php';
@@ -17,7 +18,5 @@ $buscador = new Buscador($client, $crawler);
 $courses = $buscador->buscar('/cursos-online-programacao/php');
 
 foreach ($courses as $course) {
-    echo $course . PHP_EOL;
+    exibeMensagem($course);
 }
-
-exibeMensagem("Hello, world! com quebra de linha");
